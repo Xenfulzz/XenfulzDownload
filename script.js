@@ -2,9 +2,9 @@
 const RELEASE = {
   version: '1.1.0',
   file: 'VEYRA-1.1.0-x64.msi',
-  // Where the installer lives. Keep it next to this page (downloads/), or paste a
-  // GitHub Releases / file-host link here instead.
-  url: 'downloads/VEYRA-1.1.0-x64.msi',
+  // The installer is attached to a GitHub release (the website upload limit is 25 MB).
+  // For a new version: create release v<version>, attach the MSI, then update these values.
+  url: 'https://github.com/Xenfulzz/XenfulzDownload/releases/download/v1.1.0/VEYRA-1.1.0-x64.msi',
   size: '85 MB',
   sha256: '32695BAAC6F97902CCB110EAC5A95BA6FCA1886083F7B93BE97DCF2535BE6A12',
 };
