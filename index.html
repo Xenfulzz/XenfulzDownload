@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VEYRA · Your PC. Refined.</title>
+  <meta name="description" content="VEYRA is a free Windows app that cleans, manages and optimises gaming PCs. It finds what slows your games down and explains every change before it happens.">
+  <meta name="theme-color" content="#07080B">
+  <meta property="og:title" content="VEYRA · Your PC. Refined.">
+  <meta property="og:description" content="A free Windows app that cleans, manages and optimises gaming PCs, and finds what slows your games down.">
+  <meta property="og:image" content="assets/screen-dashboard.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Inline icon set (line icons, drawn to match the app's Segoe Fluent style) -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true">
+    <defs>
+      <symbol id="i-dashboard" viewBox="0 0 24 24"><path d="M4 13a8 8 0 1 1 16 0"/><path d="M12 13l4-4"/><circle cx="12" cy="13" r="1.4"/><path d="M5 19h14"/></symbol>
+      <symbol id="i-broom" viewBox="0 0 24 24"><path d="M19 4l-7.5 7.5"/><path d="M10 10l4 4-3 6-2-1 1-3-3 2-2-1 2-3-3 1-1-2z"/></symbol>
+      <symbol id="i-storage" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="3"/><path d="M7 12h6"/><circle cx="17" cy="12" r="1"/></symbol>
+      <symbol id="i-apps" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><path d="M14 17h6M17 14v6"/></symbol>
+      <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 7.3a8 8 0 1 0 11.4 0"/></symbol>
+      <symbol id="i-games" viewBox="0 0 24 24"><path d="M7 8h10a4 4 0 0 1 4 4l-.6 3.6a2.4 2.4 0 0 1-4.2 1.2L14.5 15h-5l-1.7 1.8a2.4 2.4 0 0 1-4.2-1.2L3 12a4 4 0 0 1 4-4z"/><path d="M8 10.5v3M6.5 12h3"/><circle cx="15.5" cy="11.5" r=".8"/><circle cx="17" cy="13" r=".8"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l5-6"/><path d="M4 17h2M18 17h2M12 9V7"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="i-chip" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></symbol>
+      <symbol id="i-display" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+      <symbol id="i-tray" viewBox="0 0 24 24"><path d="M4 14l2.5-8h11L20 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 14h4l1.5 2.5h5L16 14h4"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></symbol>
+      <symbol id="i-update" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.7-4.3L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.7 4.3L20 16"/><path d="M20 20v-4h-4"/></symbol>
+      <symbol id="i-memory" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="9" rx="1.5"/><path d="M7 10v3M11 10v3M15 10v3M6 16v2M18 16v2"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+      <symbol id="i-feather" viewBox="0 0 24 24"><path d="M20 4c-7 0-12 5-12 12v4"/><path d="M8 16c5 0 9-3 10-8"/><path d="M4 20l4-4"/></symbol>
+      <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="backdrop" aria-hidden="true"><div class="glow glow-ice"></div><div class="glow glow-violet"></div><div class="grain"></div></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="VEYRA home">
+        <img src="assets/logo.png" alt="" width="34" height="34">
+        <span class="brand-text"><span class="wordmark">VEYRA</span><span class="tagline">Your PC. Refined.</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#gaming">Gaming</a>
+        <a href="#safety">Safety</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-small" href="#download"><svg class="icon"><use href="#i-download"/></svg>Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="overline"><span class="dot dot-good"></span>Free for Windows 10 and 11</p>
+          <h1>Your PC.<br><span class="gradient-text">Refined.</span></h1>
+          <p class="lead">VEYRA cleans, manages and tunes your gaming PC, then tells you exactly what slowed your last game down. Every change is explained first, and nothing happens without your say-so.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="downloads/VEYRA-1.1.0-x64.msi" download data-download>
+              <svg class="icon"><use href="#i-download"/></svg>Download for Windows
+            </a>
+            <a class="btn btn-glass btn-large" href="#features">See what it does<svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <p class="hero-meta"><span data-version>Version 1.1.0</span> · <span data-size>85 MB</span> · 64-bit · No account, no ads</p>
+        </div>
+        <div class="hero-shot reveal">
+          <div class="shot-frame">
+            <img src="assets/screen-dashboard.png" alt="The VEYRA dashboard, showing a PC health score of 100 with live processor, graphics, memory and storage readings." width="1440" height="900">
+          </div>
+          <div class="float-pill pill-a"><span class="dot dot-good"></span>PC health 100 · Excellent</div>
+          <div class="float-pill pill-b"><span class="dot dot-ice"></span>0.008% CPU in the tray</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats container reveal" aria-label="VEYRA at a glance">
+      <div class="stat"><span class="stat-value" data-count="11">11</span><span class="stat-label">tools in one app</span></div>
+      <div class="stat"><span class="stat-value">0</span><span class="stat-label">ads, accounts or tracking</span></div>
+      <div class="stat"><span class="stat-value">&lt;1<small>ms</small></span><span class="stat-label">to check for running games</span></div>
+      <div class="stat"><span class="stat-value">100<small>%</small></span><span class="stat-label">of changes ask first</span></div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Everything in one place</p>
+          <h2>One calm app instead of ten noisy ones</h2>
+          <p class="section-lead">Every module works with real readings from your PC. No fake scores, no scare tactics, no "123 problems found".</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-dashboard"/></svg></span><h3>Dashboard</h3><p>A live health score with processor, graphics, memory and storage readings, updated every second.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-broom"/></svg></span><h3>Cleaner</h3><p>Finds temporary files, caches and leftovers in known junk folders only. You review everything before anything is removed.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-storage"/></svg></span><h3>Storage analyser</h3><p>See what fills your drives by category, drill into the largest folders and spot the biggest files.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-apps"/></svg></span><h3>Applications</h3><p>Every installed app with its real size and publisher. Uninstalls run the app's own uninstaller, and leftovers are pointed out.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-power"/></svg></span><h3>Startup manager</h3><p>See what starts when you sign in and how heavy it is. Turn entries off the same safe way Task Manager does.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-games"/></svg></span><h3>Game library</h3><p>Steam, Epic, Xbox, Riot, Battle.net, Ubisoft, EA and GOG in one library with official artwork and a Play button.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-gauge"/></svg></span><h3>Gaming optimiser</h3><p>Seven clearly explained, reversible Windows tweaks, plus profiles and background-app controls. Undo any of them in one click.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-check"/></svg></span><h3>PC Checkup</h3><p>Catches the things that quietly cost you frames: a slow refresh rate, memory below its rated speed, a graphics card in the wrong slot.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-pulse"/></svg></span><h3>Game sessions</h3><p>Runs quietly in the background while you play, then shows what slowed your game down.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-shield"/></svg></span><h3>Ad blocker</h3><p>XenBlock blocks ads, trackers and pop-ups in Chrome, Edge and Brave. VEYRA walks you through adding it.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-chip"/></svg></span><h3>System information</h3><p>Processor, graphics, memory modules, motherboard, BIOS and drives, all in one tidy page.</p></article>
+          <article class="card feature reveal"><span class="icon-tile"><svg class="icon"><use href="#i-tray"/></svg></span><h3>Quiet in the tray</h3><p>Starts with Windows if you want it to and waits in the system tray. Close the window and it keeps watching your game sessions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gaming: sessions -->
+    <section class="section" id="gaming">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <p class="overline">Game sessions</p>
+          <h2>Know exactly what slowed your game down</h2>
+          <p class="section-lead">VEYRA notices when you start a game from your library. When you close it, you get a plain-English report.</p>
+          <ul class="ticks">
+            <li><svg class="icon"><use href="#i-check"/></svg>Background apps that stole processor time</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Windows Update, Defender scans or indexing kicking in</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Memory running out, disk hogs and graphics card heat</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Whether your processor or graphics card was the limit, worded honestly</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Play time tracked for launchers that don't record it</li>
+          </ul>
+          <p class="fine">Read-only: nothing is changed while you play. Checking for games takes under a millisecond every five seconds.</p>
+        </div>
+        <div class="mock card reveal" aria-label="Example game session report">
+          <div class="mock-head">
+            <span class="icon-tile"><svg class="icon"><use href="#i-pulse"/></svg></span>
+            <div><strong>Game session: Your game</strong><span class="muted">Yesterday · 1 h 12 min</span></div>
+            <span class="pill pill-warning">Worth fixing</span>
+          </div>
+          <p class="muted small">Averages: Processor 58% · Graphics 96% · GPU peak 74 °C · Memory peak 71%</p>
+          <div class="finding"><span class="pill pill-warning">Worth fixing</span><div><strong>Main display ran at 60 Hz but supports 144 Hz</strong><span class="muted">You only saw up to 60 frames per second, whatever the game produced.</span></div></div>
+          <div class="finding"><span class="pill pill-info">Note</span><div><strong>A chat app used 6% of your processor in the background</strong><span class="muted">Close it before playing, or lower its priority in Optimisation.</span></div></div>
+          <div class="finding"><span class="pill pill-info">Note</span><div><strong>Your graphics card was the limit</strong><span class="muted">That's normal in demanding games. Try DLSS, FSR or XeSS for more FPS.</span></div></div>
+          <div class="finding"><span class="pill pill-good">Good</span><div><strong>VEYRA used 0.2% of your processor while you played</strong><span class="muted">It changes nothing while you play.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gaming: checkup -->
+    <section class="section">
+      <div class="container split split-reverse">
+        <div class="split-copy reveal">
+          <p class="overline">PC Checkup</p>
+          <h2>Find the free FPS you didn't know you were missing</h2>
+          <p class="section-lead">Most gaming PCs leave performance on the table without anyone noticing. PC Checkup looks for the usual suspects, and fixes what Windows allows, only after you confirm.</p>
+          <div class="mini-grid">
+            <div class="mini"><svg class="icon"><use href="#i-display"/></svg><div><strong>Refresh rate</strong><span>Your monitor running at 60 Hz when it supports 144? VEYRA switches it, and switches back by itself after 15 seconds unless you keep it.</span></div></div>
+            <div class="mini"><svg class="icon"><use href="#i-memory"/></svg><div><strong>Memory speed</strong><span>Reads your RAM's rated XMP or EXPO speed from its part number and shows how to turn it on.</span></div></div>
+            <div class="mini"><svg class="icon"><use href="#i-chip"/></svg><div><strong>Graphics card</strong><span>Wrong PCIe slot or an old driver, with a link to the right download.</span></div></div>
+            <div class="mini"><svg class="icon"><use href="#i-image"/></svg><div><strong>Black wallpaper</strong><span>Finds why your background keeps going black and restores it from Windows' own copy.</span></div></div>
+            <div class="mini"><svg class="icon"><use href="#i-update"/></svg><div><strong>Windows Update</strong><span>Shows waiting updates and pending restarts without installing anything.</span></div></div>
+            <div class="mini"><svg class="icon"><use href="#i-play"/></svg><div><strong>Play and reclaim</strong><span>Launch any game from VEYRA, and see how much space games you haven't touched in six months use.</span></div></div>
+          </div>
+        </div>
+        <div class="mock card reveal" aria-label="Example PC Checkup results">
+          <div class="mock-head">
+            <div><strong>PC Checkup</strong><span class="muted">What holds your games back</span></div>
+            <span class="pill pill-warning">3 things worth fixing</span>
+          </div>
+          <div class="check"><span class="icon-tile small"><svg class="icon"><use href="#i-display"/></svg></span><div><span class="pill pill-warning">Worth fixing</span><strong>Main display runs at 120 Hz but supports 144 Hz</strong></div><span class="fake-btn">Switch to 144 Hz</span></div>
+          <div class="check"><span class="icon-tile small"><svg class="icon"><use href="#i-memory"/></svg></span><div><span class="pill pill-warning">Worth fixing</span><strong>Memory runs at 4800 MT/s but is rated for 6000 MT/s</strong></div><span class="fake-btn">How to fix</span></div>
+          <div class="check"><span class="icon-tile small"><svg class="icon"><use href="#i-image"/></svg></span><div><span class="pill pill-warning">Worth fixing</span><strong>Your wallpaper picture is missing</strong></div><span class="fake-btn">Restore wallpaper</span></div>
+          <div class="check"><span class="icon-tile small"><svg class="icon"><use href="#i-chip"/></svg></span><div><span class="pill pill-good">Good</span><strong>Graphics card connected at full width (x16)</strong></div></div>
+          <div class="check"><span class="icon-tile small"><svg class="icon"><use href="#i-update"/></svg></span><div><span class="pill pill-good">Good</span><strong>Windows is up to date</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad blocker -->
+    <section class="section">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <p class="overline">Ad blocker included</p>
+          <h2>XenBlock: faster pages, fewer trackers</h2>
+          <p class="section-lead">VEYRA comes with XenBlock, an ad, tracker and pop-up blocker that works entirely on your device. Browsers only accept extensions from outside their store one way, so VEYRA walks you through it step by step:</p>
+          <ol class="steps">
+            <li>Get XenBlock ready with one click</li>
+            <li>VEYRA opens your browser's extensions page</li>
+            <li>Turn on Developer mode</li>
+            <li>Click Load unpacked. VEYRA has already copied the folder path for you</li>
+            <li>Pin it. VEYRA notices when it's on</li>
+          </ol>
+          <p class="fine">Works in Chrome, Edge and Brave (version 121 or newer). Firefox isn't supported.</p>
+        </div>
+        <div class="shot-frame reveal"><img src="assets/screen-adblocker.png" alt="VEYRA's Ad blocker page, listing installed browsers with Set up buttons and numbered setup steps." width="1440" height="900" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section" id="safety">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Built to be trusted</p>
+          <h2>Nothing changes without you</h2>
+          <p class="section-lead">Most "PC optimisers" delete first and explain never. VEYRA works the other way round.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="card trust reveal"><span class="icon-tile"><svg class="icon"><use href="#i-check"/></svg></span><h3>Explained, then confirmed</h3><p>Every change says what it does, why it helps and what the trade-off is. Then you decide.</p></article>
+          <article class="card trust reveal"><span class="icon-tile"><svg class="icon"><use href="#i-undo"/></svg></span><h3>Undo anything</h3><p>Original settings are backed up before VEYRA touches them, so every tweak can be put back exactly.</p></article>
+          <article class="card trust reveal"><span class="icon-tile"><svg class="icon"><use href="#i-lock"/></svg></span><h3>Your data stays yours</h3><p>No account, no telemetry, no ads. VEYRA's own files live in one folder on your PC.</p></article>
+          <article class="card trust reveal"><span class="icon-tile"><svg class="icon"><use href="#i-feather"/></svg></span><h3>Light as a feather</h3><p>Hidden in the tray it uses 0.008% of your processor and about 17 MB of memory. Settings › About shows its live usage.</p></article>
+        </div>
+        <div class="screens reveal">
+          <p class="screens-caption muted small">The Cleaner only scans known junk folders and asks before anything is removed.</p>
+          <figure class="shot-frame"><img src="assets/screen-cleaner.png" alt="VEYRA's Cleaner page, explaining that only known junk folders are touched and nothing is deleted until you confirm." width="1440" height="900" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download card reveal">
+          <div class="download-main">
+            <img src="assets/logo.png" alt="" width="72" height="72" class="download-logo">
+            <div>
+              <p class="overline">Free download</p>
+              <h2>Get VEYRA</h2>
+              <p class="section-lead">One installer with everything included. No .NET or extra runtimes needed.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary btn-large" href="downloads/VEYRA-1.1.0-x64.msi" download data-download>
+                  <svg class="icon"><use href="#i-download"/></svg><span>Download <span data-version-short>1.1.0</span> for Windows</span>
+                </a>
+              </div>
+              <p class="hero-meta"><span data-file>VEYRA-1.1.0-x64.msi</span> · <span data-size>85 MB</span></p>
+            </div>
+          </div>
+          <div class="download-side">
+            <h3>Requirements</h3>
+            <ul class="plain">
+              <li>64-bit Windows 10 (version 2004 or later) or Windows 11</li>
+              <li>The full glass look needs Windows 11</li>
+              <li>About 300 MB of disk space</li>
+            </ul>
+            <h3>Installing</h3>
+            <ol class="plain numbered">
+              <li>Open the downloaded file and follow the setup steps.</li>
+              <li>Choose whether you want a desktop shortcut and VEYRA starting with Windows. Both are ticked by default.</li>
+              <li>VEYRA isn't code-signed yet, so Windows may say it "protected your PC". Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+            </ol>
+            <div class="hash">
+              <span class="muted small">SHA-256 checksum</span>
+              <div class="hash-row"><code data-sha>32695BAAC6F97902CCB110EAC5A95BA6FCA1886083F7B93BE97DCF2535BE6A12</code>
+                <button class="btn btn-glass btn-icon" type="button" data-copy-sha aria-label="Copy checksum"><svg class="icon"><use href="#i-copy"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <p class="overline">Questions</p>
+          <h2>Good to know</h2>
+        </div>
+        <div class="faq reveal">
+          <details class="card"><summary>Is VEYRA really free?</summary><p>Yes. No trial, no "pro" upgrade nagging, no ads and no account.</p></details>
+          <details class="card"><summary>Why does Windows warn me when I open the installer?</summary><p>The installer isn't code-signed yet, so Windows SmartScreen doesn't recognise the publisher. Choose <strong>More info</strong>, then <strong>Run anyway</strong>. You can check the file against the SHA-256 checksum above.</p></details>
+          <details class="card"><summary>Will it delete my files or change my settings?</summary><p>Not without you. The Cleaner only looks in known junk folders and shows everything before deleting. Every optimiser tweak is explained, confirmed and backed up first, so it can be undone. PC Checkup's refresh-rate fix switches back by itself unless you keep it.</p></details>
+          <details class="card"><summary>Does it slow my games down?</summary><p>No. Hidden in the tray, VEYRA uses about 0.008% of your processor. While you play it takes a lightweight reading every five seconds and changes nothing.</p></details>
+          <details class="card"><summary>How do updates work?</summary><p>Download the newest installer from this page and run it. It upgrades VEYRA in place and keeps your settings and history.</p></details>
+          <details class="card"><summary>Does the ad blocker work in Firefox?</summary><p>Not yet. XenBlock is built for Chromium browsers: Chrome, Edge and Brave, version 121 or newer.</p></details>
+          <details class="card"><summary>How do I uninstall it?</summary><p>Windows Settings › Apps › Installed apps › VEYRA › Uninstall. If you changed settings with the optimiser, undo them in VEYRA first.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <img src="assets/logo.png" alt="" width="28" height="28">
+        <span class="wordmark">VEYRA</span>
+      </a>
+      <p class="muted small">Made by <span class="gradient-text strong">Xenfulz</span> · © <span data-year>2026</span> · Not affiliated with Microsoft or any game launcher.</p>
+      <a class="muted small" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
