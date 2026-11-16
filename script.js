@@ -1,12 +1,12 @@
 // VEYRA website. Edit RELEASE when you publish a new version; the page updates itself.
 const RELEASE = {
-  version: '1.1.0',
-  file: 'VEYRA-1.1.0-x64.msi',
+  version: '1.2.0',
+  file: 'VEYRA-1.2.0-x64.msi',
   // The installer is attached to a GitHub release (the website upload limit is 25 MB).
   // For a new version: create release v<version>, attach the MSI, then update these values.
-  url: 'https://github.com/Xenfulzz/XenfulzDownload/releases/download/v1.1.0/VEYRA-1.1.0-x64.msi',
+  url: 'https://github.com/Xenfulzz/XenfulzDownload/releases/download/v1.2.0/VEYRA-1.2.0-x64.msi',
   size: '85 MB',
-  sha256: '32695BAAC6F97902CCB110EAC5A95BA6FCA1886083F7B93BE97DCF2535BE6A12',
+  sha256: '5F2144CC7EF2C798A5ECC100E9B224D62E3A55172F016FFD338E8A9420F8DC73',
 };
 
 (() => {
