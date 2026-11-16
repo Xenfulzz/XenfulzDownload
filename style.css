@@ -203,7 +203,7 @@ p { margin: 0; }
   -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: var(--shadow);
   animation: float 6s ease-in-out infinite;
 }
-.pill-a { left: -26px; bottom: 18%; }
+.pill-a { left: -26px; bottom: -20px; } /* hangs off the corner, like .pill-b, so it never covers the screenshot's content */
 .pill-b { right: -10px; top: -16px; animation-delay: -3s; }
 @keyframes float { 50% { transform: translateY(-8px); } }
 
